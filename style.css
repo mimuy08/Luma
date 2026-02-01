@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background: #050509;
+  color: #e6e6e6;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hidden { display: none; }
+
+#boot { animation: flicker 2s infinite; }
+
+#app {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 20px;
+}
+
+#luma {
+  width: 180px;
+  animation: float 4s ease-in-out infinite;
+}
+
+#dialogue {
+  min-height: 80px;
+  margin: 20px 0;
+  white-space: pre-line;
+}
+
+#input {
+  width: 100%;
+  padding: 12px;
+  background: #0d0d12;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes flicker {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
